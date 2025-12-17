@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+
+    <!-- Internal CSS  -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #667eea, #764ba2);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #6d3e9b, #667eea);
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 50px 30px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #5e2e9e;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+            display: block;
+        }
+
+        .profile p {
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #524e4e;
+            display: inline-block;
+        }
+
+        .skills {
+            padding: 50px 30px;
+            border-radius: 15%;
+            background-color: #d8e0e7;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .skill-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact {
+            padding: 50px 30px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        form {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #f4f6f8;
+            padding: 25px;
+            border-radius: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 12px;
+            width: 100%;
+            font-size: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #8c95e6, #1f0a50);
+        }
+
+        footer {
+            background-color: #392c6b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+      
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Hayat Abdulfetah</h1>
+            <p>Software Engineering Student</p>
+        </header>
+
+        <section class="profile">
+            <img src="image.png" alt="Profile Image">
+            <p>
+                I am a third-year Software Engineering student with a strong interest in technology and web development. 
+                I enjoy learning HTML and CSS and building responsive web pages. My goal is to become a skilled software engineer 
+                and create useful applications that solve real-world problems.
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">HTML</div>
+                <div class="skill-box">CSS</div>
+                <div class="skill-box">Problem Solving</div>
+                <div class="skill-box">Teamwork</div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Hayat Abdulfetah. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
